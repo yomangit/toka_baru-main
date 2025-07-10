@@ -6,8 +6,7 @@
     "license": "MIT",
     "require": {
         "php": "^8.2",
-        "ext-fileinfo": "*",
-        "ext-gd": "*",
+
         "cjmellor/approval": "^1.6",
         "diglactic/laravel-breadcrumbs": "^10.0",
         "directorytree/ldaprecord-laravel": "^3.3",

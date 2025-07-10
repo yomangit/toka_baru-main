@@ -8,13 +8,13 @@
   ),
   'cjmellor/approval' => 
   array (
-    'providers' => 
-    array (
-      0 => 'Cjmellor\\Approval\\ApprovalServiceProvider',
-    ),
     'aliases' => 
     array (
       'Approval' => 'Cjmellor\\Approval\\Facades\\Approval',
+    ),
+    'providers' => 
+    array (
+      0 => 'Cjmellor\\Approval\\ApprovalServiceProvider',
     ),
   ),
   'diglactic/laravel-breadcrumbs' => 
@@ -34,17 +34,6 @@
     array (
       0 => 'LdapRecord\\Laravel\\LdapServiceProvider',
       1 => 'LdapRecord\\Laravel\\LdapAuthServiceProvider',
-    ),
-  ),
-  'intervention/image' => 
-  array (
-    'aliases' => 
-    array (
-      'Image' => 'Intervention\\Image\\Facades\\Image',
-    ),
-    'providers' => 
-    array (
-      0 => 'Intervention\\Image\\ImageServiceProvider',
     ),
   ),
   'ladumor/laravel-pwa' => 
@@ -81,24 +70,24 @@
   ),
   'livewire/livewire' => 
   array (
-    'providers' => 
-    array (
-      0 => 'Livewire\\LivewireServiceProvider',
-    ),
     'aliases' => 
     array (
       'Livewire' => 'Livewire\\Livewire',
     ),
+    'providers' => 
+    array (
+      0 => 'Livewire\\LivewireServiceProvider',
+    ),
   ),
   'maatwebsite/excel' => 
   array (
-    'providers' => 
-    array (
-      0 => 'Maatwebsite\\Excel\\ExcelServiceProvider',
-    ),
     'aliases' => 
     array (
       'Excel' => 'Maatwebsite\\Excel\\Facades\\Excel',
+    ),
+    'providers' => 
+    array (
+      0 => 'Maatwebsite\\Excel\\ExcelServiceProvider',
     ),
   ),
   'nesbot/carbon' => 

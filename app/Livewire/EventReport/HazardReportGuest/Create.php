@@ -266,23 +266,13 @@ class Create extends Component
             $references      = str_pad($reference, 4, "0", STR_PAD_LEFT);
             $this->reference = $referenceHazard . $references;
         }
-        $this->validate();
-        if (!empty($this->documentation)) {
-
-            // Kompres dan resize gambar
-            $image = Image::make($this->documentation->getRealPath())
-                ->resize(1200, null, function ($constraint) {
-                    $constraint->aspectRatio();
-                    $constraint->upsize();
-                })
-                ->encode($this->documentation->getClientOriginalExtension(), 75);
-
-            // Simpan hasil kompres ke storage secara manual
-            $filename = uniqid() . '.' . strtolower($this->documentation->getClientOriginalExtension());
-            Storage::disk('public')->put('documents/hzd/' . $filename, $image);
-            $this->fileUpload = $filename;
+         $this->validate();
+        if (! empty($this->documentation)) {
+            $file_name        = $this->documentation->getClientOriginalName();
+            $this->fileUpload = pathinfo($file_name, PATHINFO_EXTENSION);
+            $this->documentation->storeAs('public/documents/hzd', $file_name);
         } else {
-            $this->fileUpload = null;
+            $file_name = "";
         }
         if ($this->show_immidiate === 'no') {
             $this->immediate_corrective_action = null;
